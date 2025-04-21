@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Portfolio</title>
+  <title> Home  |  Portolio</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" href="favicon.png">
+
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -18,20 +21,22 @@
     
     <!-- Hamburger -->
     <div class="hamburger" id="hamburger">
-      <div class="bar"></div>
-      <div class="bar"></div>
-      <div class="bar"></div>
-    </div>
+        <div class="bar top"></div>
+        <div class="bar middle"></div>
+        <div class="bar bottom"></div>
+      </div>
+      
   
     <!-- Nav links -->
     <ul class="nav-links" id="nav-links">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Blog</a></li>
-      <li><a href="#">Projects</a></li>
-      <li><a href="#">Challenge</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#challenge">Challenge</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      
   </nav>
   
 
@@ -39,6 +44,30 @@
   <section class="landing">
     <h1><span id="typewriter-text"></span><span class="cursor">|</span></h1>
   </section>
+  
+  <section id="about" class="about-section">
+    <div class="about-container">
+      <div class="about-image">
+        <img src="profile.jpg" alt="My Photo">
+      </div>
+      <div class="about-content">
+        <h2>About Me</h2>
+        <p>Hi, I'm Bharadwaja 👋</p>
+        <p>
+          I'm a passionate developer with a love for building modern, elegant websites.
+          I enjoy solving real-world problems with code, learning new technologies,
+          and occasionally breaking things to understand how they work 😄.
+        </p>
+        <div class="skills">
+          <span>💻 Web Dev</span>
+          <span>📱 App Dev</span>
+          <span>🎨 UI/UX</span>
+          <span>🚀 Learning AI</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  
   
 
   <!-- Script -->
