@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #111;
+    color: white;
+    overflow: hidden;
+  }
+  
+  #dots-canvas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+  
+  /* Navbar */
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.3); /* translucent background */
+    backdrop-filter: blur(10px);   /* the glass effect */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+  }
+  
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    transition: color 0.3s;
+  }
+  
+  .nav-links li a:hover {
+    color: #00f0ff;
+  }
+  
+  /* Landing Section */
+  .landing {
+    position: relative;
+    z-index: 1;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .landing h1 {
+    font-size: 3rem;
+    opacity: 0;
+    animation: fadeIn 2s ease forwards;
+    animation-delay: 0.3s;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    /* background: rgba(0, 0, 0, 0.4); Optional background */
+    /* backdrop-filter: blur(6px);     Slight blur effect */
+    /* box-shadow: 0 0 20px rgba(0, 255, 255, 0.1); Soft glow */
+
+  }
+
+  .logo-img {
+    height: 40px;
+    animation: rotateY 7s linear infinite;
+    transform-style: preserve-3d;
+  }
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 6px;
+    z-index: 15;
+  }
+  
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+  }
+  
+  .cursor {
+    display: inline-block;
+    color: #00f0ff;
+    font-weight: bold;
+    animation: blink 1s infinite;
+  }
+  
+  @keyframes rotateY {
+    from {
+      transform: rotateY(0deg);
+    }
+    to {
+      transform: rotateY(360deg);
+    }
+  }
+  
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @media (max-width: 768px) {
+    .hamburger {
+      display: flex;
+    }
+  
+    .nav-links {
+      position: fixed;
+      top: 70px;
+      right: 0;
+      height: calc(100% - 70px);
+      width: 200px;
+      background-color: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(10px);
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 2rem 1rem;
+      gap: 1.2rem;
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in-out;
+    }
+  
+    .nav-links.active {
+      transform: translateX(0);
+    }
+  
+    .nav-links li {
+      width: 100%;
+    }
+  
+    .nav-links li a {
+      display: block;
+      width: 100%;
+      font-size: 1.1rem;
+    }
+  }
+  
+  
+  
